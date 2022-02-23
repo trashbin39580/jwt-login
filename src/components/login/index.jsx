@@ -20,7 +20,7 @@ const Signup = () => {
         try {
             e.preventDefault();
             setIsdLoading(true)
-            const URL = "http://localhost:8080/api/auth/";
+            const URL = "https://aymane-jwt-auth.herokuapp.com/api/auth/";
             const {data: res} = await axios.post(URL, data);
             localStorage.setItem("token", res.data);
             window.location = '/';

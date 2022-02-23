@@ -20,7 +20,7 @@ function App() {
     if(decodedToken){
       const {_id} = decodedToken;
       const fetchUser = async () => {
-        const URL = `http://localhost:8080/api/users/${_id}`;
+        const URL = `https://aymane-jwt-auth.herokuapp.com/api/users/${_id}`;
         const res = await axios.get(URL);
         setUser(res.data.user);
       }

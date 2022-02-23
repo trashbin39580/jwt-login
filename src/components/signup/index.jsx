@@ -19,7 +19,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const URL = "http://localhost:8080/api/users/";
+            const URL = "https://aymane-jwt-auth.herokuapp.com/api/users/";
             const {data: res} = await axios.post(URL, data);
             navigate('/login');
             console.log(res.message)
